@@ -4,7 +4,7 @@ RUN apt-get install openssh-server sudo net-tools -y
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 fwb
 RUN echo 'fwb:fwb1234' | chpasswd
 RUN service ssh start
-RUN mkdir /ode
+RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
 RUN pip3 install -r requirements.txt
